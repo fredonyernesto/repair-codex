@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
 import NewProjectPage from "./pages/NewProjectPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App(){
   return(
@@ -8,6 +9,7 @@ function App(){
 <Routes>
   <Route path="/" element={<HomePage />} />
   <Route path="/projects/new" element={<NewProjectPage />} />
+  <Route path="/projects/:id" element={<ProjectPage />} />
 </Routes>
   );
 }

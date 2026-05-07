@@ -29,7 +29,7 @@ function HomePage(){
 
     return (
         <div style={{ maxWidth: "720px", margin: "0 auto", padding: "2rem", fontFamily: "system-ui, sans-serif"}}>
-            <header styler={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem"}}>
+            <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem"}}>
             <h1 style={{ margin: 0}}>🛠 Repair Codex</h1>
             {/*This link is styled like a button via inline CSS. Same routing under the hood.*/}
             
@@ -44,7 +44,7 @@ function HomePage(){
             {/* Search bar. Controlled input, exactly like in the High Score Wall. */}
             <input
             type="text"
-            palceholder="Search projects..."
+            placeholder="Search projects..."
             value={searchText}
             onChange={(e) => setSearchText (e.target.value)}
             style={{ width: "100%", padding: "0.6rem", marginBottom: "1.5rem", fontSize: "1rem"}}

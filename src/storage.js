@@ -11,7 +11,13 @@ export function loadProjects() {
     // If nothing is stored yet, return an empty array so the caller can map() over it safely.
     if (!raw) return [];
     // JSON.parse converts the stored string back into a real JS array of objects
-    return JSON.parse(raw);
+    try{
+        return JSON.parse(raw);
+    } catch (err) {
+        console.error("storage: corrupted data, resetting.", err);
+        return [];
+    }
+    
 }
 
 // Overwrite the entire projects list. Used by addProject, deleteProject, etc.

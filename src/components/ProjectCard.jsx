@@ -6,12 +6,13 @@ function ProjectCard({ project }) {
     // Find the first step that has an image, to use as the card's thumbnail.
     // .find() returns the first match or undefined.
 
-    const firstImageStep = loadProjects.steps.find((s) => s.imgae);
+    const firstImageStep = project.steps.find((s) => s.image);
     const thumbnail = firstImageStep ? firstImageStep.image : null;
 
     // Format the date nicely. toLocaleDateString picks a sensisble default for the user's locale.
     const dateLabel = new Date(project.createdAt).toLocaleDateString();
 
+    
     return(
         // Wrap the whole card in a link so clicking anywhere on it navigates to the project.
         <Link 
